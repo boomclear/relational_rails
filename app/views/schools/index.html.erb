@@ -1,4 +1,7 @@
+<%= link_to "All Students", "/students"  %>
+<a href="/schools">All Schools</a>
 <h1>All Schools<h1>
 <% @schools.each do |school| %>
 <p><%= school.name %></p>
+<p>Created at: <%= school.created_at %></p>
 <% end %>

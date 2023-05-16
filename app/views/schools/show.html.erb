@@ -1,6 +1,10 @@
 <a href="/schools">Schools Index</a>
+<%= link_to "All Students", "/students"  %>
+<a href="/schools">All Schools</a>
+<%= link_to "Students to this School", "/schools/#{@school.id}/students" %>
 <h3><%= @school.name %></h3>
 <p>Open Classes: <%= @school.open_classes %></p>
 <p>Accepting New Students: <%= @school.accepting_new_students %></p>
 <p>Created at: <%= @school.created_at %></p>
 <p>Updated at: <%= @school.updated_at %></p>
+<p>Number of students: <%= @school.students.count %> </p>
